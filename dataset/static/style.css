@@ -1,0 +1,135 @@
+/* Page Background */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top, #0f2027, #203a43, #2c5364);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Animated glowing background circles */
+body::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: #00f7ff;
+    border-radius: 50%;
+    filter: blur(150px);
+    top: -100px;
+    left: -100px;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: #ff00ff;
+    border-radius: 50%;
+    filter: blur(150px);
+    bottom: -100px;
+    right: -100px;
+}
+
+/* Main Card */
+.container {
+    position: relative;
+    width: 420px;
+    padding: 40px;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(15px);
+    text-align: center;
+    box-shadow: 0 0 40px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.15);
+    z-index: 10;
+}
+
+/* Title */
+h1 {
+    color: #fff;
+    font-size: 34px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 20px cyan;
+}
+
+/* Subtitle */
+p {
+    color: #d9d9d9;
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+/* Input Field */
+input {
+    width: 100%;
+    padding: 16px;
+    border: 2px solid rgba(255,255,255,0.2);
+    border-radius: 15px;
+    outline: none;
+    background: rgba(255,255,255,0.08);
+    color: white;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: cyan;
+    box-shadow: 0 0 20px cyan;
+}
+
+/* Placeholder */
+input::placeholder {
+    color: #cfcfcf;
+}
+
+/* Glowing Button */
+button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 15px;
+    background: linear-gradient(45deg, #00dbde, #fc00ff);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s ease;
+    box-shadow: 0 0 20px rgba(0,255,255,0.6);
+}
+
+/* Glow Hover Effect */
+button:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 0 15px cyan,
+        0 0 30px cyan,
+        0 0 60px #fc00ff;
+}
+
+/* Result Box */
+.result {
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 15px;
+    background: rgba(0,255,255,0.15);
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    border: 1px solid cyan;
+    box-shadow: 0 0 20px rgba(0,255,255,0.4);
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    color: #bbb;
+    font-size: 14px;
+}

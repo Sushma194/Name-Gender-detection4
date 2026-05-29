@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gender Detection</title>
+
+    <!-- CSS Link -->
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Gender Detection By Name</h1>
+
+        <form action="/predict" method="POST">
+
+            <input
+                type="text"
+                name="name"
+                placeholder="Enter Your Name"
+                required>
+
+            <button type="submit">
+                Predict Gender
+            </button>
+
+        </form>
+
+        {% if prediction_text %}
+        <div class="result">
+            {{ prediction_text }}
+        </div>
+        {% endif %}
+
+        <footer>
+            
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
